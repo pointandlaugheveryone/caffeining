@@ -1,0 +1,6 @@
+/bin
+/src/lib
+/src/lib64
+*.venv
+.env
+pyvenv.cfg
