@@ -4,3 +4,6 @@
 *.venv
 .env
 pyvenv.cfg
+__pycache__/
+*.py[cod]
+*$py.class
