@@ -1,0 +1,1 @@
+DATABASE_URI = 'sqlite:///home/roni/repos/cafein/Drinks.db'
