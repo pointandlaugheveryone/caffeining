@@ -7,7 +7,7 @@ from config import Drinks, Stores
 
 Base = declarative_base()
 
-# Many-to-many association table
+# Many-to-many association table - to show more than one store (TODO: small icons of all stores where drink is in sale)
 store_drink_association = Table(
     'store_drink', Base.metadata,
     Column('store_id', Integer, ForeignKey('Stores.id')),

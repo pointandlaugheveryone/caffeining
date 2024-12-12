@@ -1,7 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for, session
-# from models import db, Drink   
-# from api import fetch_drinks
+from models import Drink   
+# from kupi import fetch_drinks
 
+app = Flask(__name__)
 @app.route('/')
 def get_drinks():
     drinks = Drink.query.filter_by(discount=True).all()
