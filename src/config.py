@@ -1,1 +1,1 @@
-DATABASE_URI = 'sqlite:///home/roni/repos/cafein/Drinks.db'
+DATABASE_URI = 'sqlite:///DrinkData.db'

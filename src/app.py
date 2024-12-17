@@ -5,24 +5,20 @@ from config import DATABASE_URI
 from models import Base
 import route
 from flask import Flask, render_template, request, redirect, url_for, session
-from models import Drink   
+from models import Session, Drink   
 # from kupi import fetch_drinks
 
 
-engine = create_engine(DATABASE_URI)        # init db connection
-Base.metadata.create_all(engine)
-Session = sessionmaker(bind=engine)
-session = Session()
 
 app = Flask(__name__)
 @app.route('/')
 def get_drinks():
-    drinks = Drink.query.filter_by(discount=True).all()
-    return render_template('home.html, drinks=drinks')
+    drinks = session.query(Drink).filter_by(discount=True).all()
+    return render_template('home.html', drinks=drinks)
 
 @app.route('/zero')
 def get_zero_drinks():
-    zero_drinks = Drink.query.filter_by(is_zero=True, discount=True).all()
+    zero_drinks = session.query(Drink).filter_by(is_zero=True, discount=True).all()
     return render_template('zero.html', drinks=zero_drinks)
 
 @app.route('/about')
