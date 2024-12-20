@@ -28,8 +28,9 @@ session.add_all([albert, billa, globus, kaufland, lidl, norma, penny, tesco])
 '''
 #TODO: add urls to fetch api 4 drinks
 drink1 = Drink(name='Drink 1', normal_cost=1.0, discount_cost=1.0, image_url='src/static/images/', is_zero=False)
-drink2 = Drink(name='Drink 2', normal_cost=1.0, discount_cost=1.0, image_url='src/static/images/', is_zero=True)
 session.add_all([])
 '''
+
+d = Drink(name='Drink 2', normal_cost=0, discount_cost=0, image_url='src/static/images/', is_zero=False)
 
 session.commit()
