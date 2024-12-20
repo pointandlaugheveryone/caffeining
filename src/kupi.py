@@ -13,9 +13,9 @@ async def task():
     '''
 
     text = await parser.get_prices("coca-cola-zero")
-    mod = text.split(',')
+    test = text.split(',')
     
-    print(mod)
+    print(test)
     await parser.session.close()
 
 asyncio.run(task())
